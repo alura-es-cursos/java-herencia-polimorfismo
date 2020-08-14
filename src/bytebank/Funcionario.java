@@ -4,7 +4,7 @@ public class Funcionario {
 
     private String nombre;
     private String documento;
-    private double salario;
+    protected double salario;
     private int tipo;
 
     public String getNombre() {
@@ -40,13 +40,7 @@ public class Funcionario {
     }
 
     public double getBonificacion() {
-        if (this.tipo == 0) { // Funcionário comun;
-            return this.salario * 0.1;
-        } else if (this.tipo == 1) { // Gerente;
-            return this.salario;
-        } else {
-            return this.salario + 1000.0;
-        }
+        return this.salario * 0.1;
     }
 
 }

@@ -1,51 +1,23 @@
 package bytebank;
 
-public class Gerente {
+public class Gerente extends Funcionario {
 
-    private String nombre;
-    private String documento;
-    private double salario;
-    private int tipo;
-    private int clave;
+    private String clave;
 
-    public String getNombre() {
-        return nombre;
+    public String getClave() {
+        return clave;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setClave(String clave) {
+        this.clave = clave;
     }
 
-    public String getDocumento() {
-        return documento;
-    }
+//    public double getBonificacion() {
+//        return this.salario;
+//    }
 
-    public void setDocumento(String documento) {
-        this.documento = documento;
-    }
-
-    public double getSalario() {
-        return salario;
-    }
-
-    public void setSalario(double salario) {
-        this.salario = salario;
-    }
-
-    public int getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(int tipo) {
-        this.tipo = tipo;
-    }
-
-    public double getBonificacion() {
-        return this.salario;
-    }
-
-    public boolean autentica(int senha) {
-        if(this.clave == senha) {
+    public boolean iniciarSesion(String clave) {
+        if(this.clave == clave) {
             return true;
         } else {
             return false;

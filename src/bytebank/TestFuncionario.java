@@ -3,7 +3,7 @@ package bytebank;
 public class TestFuncionario {
 
 	public static void main(String[] args) {
-		Funcionario diego = new Funcionario();
+		Funcionario diego = new Contador();
 		diego.setDocumento("Diego");
 		diego.setDocumento("444556665");
 		diego.setSalario(2000);
